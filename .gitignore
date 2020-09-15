@@ -1,52 +1,23 @@
-# Prerequisites
-*.d
+#include<stdio.h>
+#include<string.h>
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
+int main(){
 
-# Linker output
-*.ilk
-*.map
-*.exp
 
-# Precompiled Headers
-*.gch
-*.pch
+char dizi[]={"[          ]"},  dizi2[]={"[          ]"};;
+int i = 1;
 
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
+while (1)
+{
+   dizi[i++] = '#';  puts(dizi);
 
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
+  sleep(1);
+   if (i % (sizeof(dizi) - 3) == 1){ system("clear"); puts(dizi2); strcpy(dizi,dizi2);  i = 1;}
+  
+  system("clear");
 
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
+}
 
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
 
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+  return 0;
+}
